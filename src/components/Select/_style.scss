@@ -1,0 +1,62 @@
+.lighting-select {
+  position: relative;
+  display: inline-flex;
+  
+  .lighting-select-suffix {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -10px;
+    transform: rotate(0deg) !important;
+    transition: $select-suffix-transition;
+    cursor: pointer;
+  }
+  .lighting-input-wrapper {
+    margin-bottom: 0;
+    .lighting-input-inner[readonly] {
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+  
+
+  &.is-opened {
+    .lighting-select-suffix {
+      transform: rotate(-180deg) !important;
+      
+    }
+  }
+}
+
+.lighting-select-list {
+  list-style:none;
+  padding-left: 0;
+  white-space: nowrap;
+  position: absolute;
+  background: $white;
+  z-index: 100;
+  top: calc(100% + 5px);
+  left: 0;
+  border: $select-border-width solid $select-border-color;
+  box-shadow: $select-box-shadow;
+  border-radius: $select-border-radius;
+  width: 100%;
+  max-height: 220px;
+
+  overflow-y: hidden;
+
+  &:hover {
+    overflow-y: auto;
+  }
+  
+  .select-item {
+    padding: $select-item-padding-y $select-item-padding-x;
+    cursor: pointer;
+    transition: $select-transition;
+    color: $body-color;
+    &.is-active, &:hover {
+      background: $select-item-active-color !important;
+    }
+    
+  }
+}
