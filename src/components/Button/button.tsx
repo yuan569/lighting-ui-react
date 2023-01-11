@@ -23,7 +23,7 @@ interface BaseButtonProps {
     /**设置Button的类型*/
     btnType?: ButtonType;
     children: React.ReactNode;
-    /**设置Button为 “link” 类型时的链接地址*/
+    /**设置当Button为 "link" 类型时的链接地址*/
     href?: string;
     /**设置Button是否为描边状态*/
     plain?: boolean;

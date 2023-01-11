@@ -1,6 +1,6 @@
 import React, { FC, ReactElement, InputHTMLAttributes, ChangeEvent } from 'react'
 import classNames from 'classnames'
-import Icon, { IconProps } from '../Icon/icon'
+import Icon, {IconProps} from '../Icon/icon'
 
 type InputSize = 'lg' | 'sm'
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size'> {
@@ -19,7 +19,6 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
 }
 
 /**
- * 支持 HTMLInput 的所有基本属性
  * ### 引用方法
  * ---
  * ~~~js

@@ -6,10 +6,10 @@ import Icon from '../Icon/icon'
 const defaultIcon = () => (
     <div>
         <Icon name="aperture" theme='primary' size="32" />
-        <Icon name="codesandbox" theme='primary' size="32" />
-        <Icon name="cpu" theme='primary' size="32" />
-        <Icon name="crosshair" theme='primary' size="32" />
-        <Icon name="github" theme='primary' size="32" />
+        <Icon name="codesandbox" theme='success' size="32" />
+        <Icon name="cpu" theme='info' size="32" />
+        <Icon name="crosshair" theme='warning' size="32" />
+        <Icon name="github" theme='danger' size="32" />
     </div>
 )
 

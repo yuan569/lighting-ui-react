@@ -2,10 +2,15 @@ import React, { FC } from "react";
 import { ThemeProps } from "../Icon/icon";
 
 export interface ProgressProps {
+  /**百分比*/
   percent: number;
+  /**高度*/
   strokeHeight?: number;
+  /**是否显示文本*/
   showText?: boolean;
+  /**内联样式*/
   styles?: React.CSSProperties;
+  /**设置主题色*/
   theme?: ThemeProps;
 }
 
@@ -18,7 +23,7 @@ export interface ProgressProps {
  * 
  */
 
-const Progress: FC<ProgressProps> = props => {
+export const Progress: FC<ProgressProps> = props => {
   const { percent, strokeHeight, showText, styles, theme } = props;
   return (
     <div className="lighting-progress-bar">

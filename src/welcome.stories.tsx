@@ -5,7 +5,7 @@ storiesOf('Welcome page', module)
   .add('welcome', () => {
     return (
       <>
-        <h1>欢迎来到 Lighting UI 组件库</h1>
+        <h1 style={{'marginTop': '30px'}}>欢迎来到 Lighting UI 组件库</h1>
         <p>Lighting UI 是一个轻量级的UI组件库，基于React Hooks、Typescirpt开发，适合toC项目的使用。</p>
         <ul>
           <li>支持按需引用</li>

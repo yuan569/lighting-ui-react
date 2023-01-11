@@ -25,7 +25,7 @@ const iconInput = () => (
   <Input
     style={{width: '260px'}}
     placeholder="input with icon"
-    icon={{name: 'user', size: '20', strokeWidth: '1.2'}}
+    icon={{name: 'user', size: '18', strokeWidth: '1.2'}}
   />  
 )
 
