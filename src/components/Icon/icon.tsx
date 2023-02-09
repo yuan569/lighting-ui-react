@@ -10,9 +10,9 @@ export interface IconProps extends FeatherIconProps {
     /** 设置主题色 */
     theme?: ThemeProps,
     /** 设置图标尺寸 */
-    size?: number,
+    size?: string,
     /** 设置图标粗细 */
-    strokeWidth?: number,
+    strokeWidth?: string,
 }
 
 
@@ -47,6 +47,9 @@ export const Icon: FC<IconProps> = (props) => {
     )
 }
 
-
+Icon.defaultProps = {
+    size: '24',
+    strokeWidth: '2',
+}
 
 export default Icon;

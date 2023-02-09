@@ -1,59 +1,61 @@
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+$white:    #FFF !default;
+$gray-50:  #FAFAFA !default;
+$gray-100: #FAFBFE !default;
+$gray-200: #eaecf3 !default;
+$gray-300: #E2E8F0 !default;
+$gray-400: #CBD5E0 !default;
+$gray-500: #A0AEC0 !default;
+$gray-600: #718096 !default;
+$gray-700: #4A5568 !default;    // Used for text color
+$gray-800: #2D3748 !default;    // Used for headings color
+$gray-900: #273444 !default;
+$black:    #1F2D3D !default;
 
-$blue:    #409eff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #d63384 !default;
-$red:     #f56c6c !default;
-$orange:  #e6a23c !default;
-$yellow:  #fadb14 !default;
-$green:   #67c23a !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$blue:    #008aff !default;
+$indigo:  #6e00ff !default;
+$purple:  #510FA8 !default;
+$pink:    #f074ad !default;
+$red:     #f25767 !default;
+$orange:  #FFBE3D !default;
+$yellow:  #ffc431 !default;
+$green:   #5cc9a7 !default;
+$teal:    #50b5ff !default;
+$cyan:    #4bd6e5 !default;
 
 $primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$secondary:     $gray-200 !default;
+$neutral:       $white !default;
 $success:       $green !default;
-$info:          $cyan !default;
+$info:          $teal !default;
 $warning:       $orange !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$light:         $gray-200 !default;
+$dark:          #171347 !default; // $gray-900;
 
 // 深浅不同的颜色类型
-$primary-5:    lighten($blue, 20%) !default;
-$primary-7:    lighten($blue, 27%) !default;
-$primary-9:    lighten($blue, 34%) !default;
+$primary-5:    lighten($blue, 7.5%) !default;
+$primary-7:    lighten($blue, 10%) !default;
+$primary-9:    lighten($blue, 12.5%) !default;
 
-$secondary-5:    lighten($gray-600, 20%) !default;
-$secondary-7:    lighten($gray-600, 27%) !default;
-$secondary-9:    lighten($gray-600, 34%) !default;
+$secondary-5:    lighten($gray-600, 7.5%) !default;
+$secondary-7:    lighten($gray-600, 10%) !default;
+$secondary-9:    lighten($gray-600, 12.5%) !default;
 
-$success-5:    lighten($green, 20%) !default;
-$success-7:    lighten($green, 27%) !default;
-$success-9:    lighten($green, 44%) !default;
+$success-5:    lighten($green, 7.5%) !default;
+$success-7:    lighten($green, 10%) !default;
+$success-9:    lighten($green, 12.5%) !default;
 
-$info-5:    lighten($cyan, 20%) !default;
-$info-7:    lighten($cyan, 27%) !default;
-$info-9:    lighten($cyan, 50%) !default;
+$info-5:    lighten($teal, 7.5%) !default;
+$info-7:    lighten($teal, 10%) !default;
+$info-9:    lighten($teal, 12.5%) !default;
 
-$warning-5:    lighten($orange, 20%) !default;
-$warning-7:    lighten($orange, 27%) !default;
-$warning-9:    lighten($orange, 40%) !default;
+$warning-5:    lighten($orange, 7.5%) !default;
+$warning-7:    lighten($orange, 10%) !default;
+$warning-9:    lighten($orange, 12.5%) !default;
 
-$danger-5:    lighten($red, 20%) !default;
-$danger-7:    lighten($red, 27%) !default;
-$danger-9:    lighten($red, 29%) !default;
+$danger-5:    lighten($red, 7.5%) !default;
+$danger-7:    lighten($red, 10%) !default;
+$danger-9:    lighten($red, 12.5%) !default;
 
 $theme-colors: 
 (
@@ -199,10 +201,21 @@ $border-radius-xs:            .1rem !default;
 $border-radius-round:        9999rem !default;
 
 // 不同类型的 box shadow
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .08) !default;
+$box-shadow:                  0 0 1.25rem rgba($black, .05) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .125) !default;
+$box-shadow-xl:               0 20px 25px -5px rgba($black, .1), 0 10px 10px -5px rgba($black, .04) !default;
+$box-shadow-2xl:              0 25px 50px -12px rgba($black, .25) !default;
+
+// Transitions
+
+$transition-base-duration:      .2s;
+$transition-base:               all $transition-base-duration ease !default;
+$transition-fade:               opacity $transition-base-duration linear !default;
+$transition-collapse:           height $transition-base-duration ease !default;
+$transition-cubic-bezier:       all $transition-base-duration cubic-bezier(.77, 0, .2, 2.25) !default;
+$transition-bg:                 background-color $transition-base-duration * 2 linear !default;
+$transition-ease-in-out:        all $transition-base-duration ease-in-out !default;
 
 // 按钮
 // 按钮基本属性
@@ -240,13 +253,13 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
-$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$btn-transition:              $transition-base;
 
 // menu
 $menu-border-width:            $border-width !default;
 $menu-border-color:            $border-color !default;
-$menu-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
-$menu-transition:              color .15s ease-in-out, border-color .15s ease-in-out !default;
+$menu-box-shadow:              $box-shadow;
+$menu-transition:              $transition-base;
 
 // menu-item
 $menu-item-padding-y:          .5rem !default;
@@ -257,7 +270,8 @@ $menu-item-disabled-color:     $gray-600 !default;
 
 //sub-menu
 //submenu
-$submenu-box-shadow: 0px 0px 12px rgba(0, 0, 0, .12);
+$submenu-box-shadow: $box-shadow;
+$submenu-border-radius: $border-radius;
 
 //input
 $input-padding-y:                       $btn-padding-y !default;
@@ -282,7 +296,6 @@ $input-disabled-border-color:           null !default;
 $input-color:                           $gray-700 !default;
 $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $border-width !default;
-$input-box-shadow:                      $box-shadow-inset !default;
 
 $input-border-radius:                   $border-radius !default;
 $input-border-radius-lg:                $border-radius-lg !default;
@@ -301,7 +314,7 @@ $input-plaintext-color:                 $body-color !default;
 $input-height-border:                   $input-border-width * 2 !default;
 
 
-$input-transition:                      border-color .3s ease-in-out, box-shadow .3s ease-in-out !default;
+$input-transition:                      $transition-ease-in-out;
 
 $input-group-addon-color:               $input-color !default;
 $input-group-addon-bg:                  $gray-200 !default;
@@ -312,12 +325,12 @@ $input-group-addon-border-color:        $input-border-color !default;
 // Select
 $select-border-width:            $border-width !default;
 $select-border-color:            $border-color !default;
-$select-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
-$select-transition:              color .15s ease-in-out, border-color .15s ease-in-out !default;
-$select-border-radius:           $border-radius-sm !default;
+$select-box-shadow:              $box-shadow;
+$select-transition:              $transition-base;
+$select-border-radius:           $border-radius !default;
 
 
-$select-suffix-transition: all 0.3s ease-in-out;
+$select-suffix-transition:       $transition-ease-in-out;
 $select-item-active-color:       $gray-200 !default;
 $select-item-padding-y:          .5rem !default;
 $select-item-padding-x:          1rem !default;
@@ -328,6 +341,6 @@ $progress-font-size:                $font-size-base * .75 !default;
 $progress-bg:                       $gray-200 !default;
 $progress-border-radius:            $border-radius-round !default;
 $progress-bar-color:                $white !default;
-$progress-bar-transition:           width .6s ease !default;
+$progress-bar-transition:           $transition-cubic-bezier;
 
 // Tabs

@@ -12,7 +12,7 @@
   left: 0;
   border: $menu-border-width solid $menu-border-color;
   box-shadow: $submenu-box-shadow;
-  border-radius: 4px;
+  border-radius: $submenu-border-radius;
   width: 100%;
   overflow: hidden;
   .suggstions-loading-icon {

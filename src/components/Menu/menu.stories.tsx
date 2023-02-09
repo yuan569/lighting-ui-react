@@ -2,8 +2,8 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import Menu from './menu'
-import MenuItem from './menuItem'
 import SubMenu from './subMenu'
+import MenuItem from './menuItem'
 
 export const defaultMenu = () => (
     <Menu defaultIndex='0' onSelect={(index) => { action(`clicked ${index} item`) }}>

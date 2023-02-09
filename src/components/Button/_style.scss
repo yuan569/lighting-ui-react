@@ -7,7 +7,7 @@
     color: $body-color;
     white-space: nowrap;
     text-align: center;
-    vertical-align: middle;
+    // vertical-align: middle;
     background-image: none;
     border: $btn-border-width solid transparent;
     @include button-size($btn-padding-y, $btn-padding-x,$btn-font-size,$border-radius);
@@ -33,7 +33,7 @@
 }
 
 .btn-default {
-    @include button-style($white,$gray-400,$body-color,$primary-9,$primary-7,$primary);
+    @include button-style($white,$gray-400,$body-color,$white,$primary,$primary);
     &.plain {
         @include button-style($white,$gray-400,$body-color,$white,$primary,$primary)
     }
@@ -41,31 +41,31 @@
 .btn-primary {
     @include button-style($primary,$primary,$white);
     &.plain {
-        @include button-style($primary-9,$primary-5,$primary,$primary,$primary,$white)
+        @include button-style($white,$primary-5,$primary,$primary,$primary,$white)
     }
 }
 .btn-success {
     @include button-style($success,$success,$white);
     &.plain {
-        @include button-style($success-9,$success-5,$success,$success,$success,$white)
+        @include button-style($white,$success-5,$success,$success,$success,$white)
     }
 }
 .btn-info {
     @include button-style($info,$info,$white);
     &.plain {
-        @include button-style($info-9,$info-5,$info,$info,$info,$white)
+        @include button-style($white,$info-5,$info,$info,$info,$white)
     }
 }
 .btn-warning {
     @include button-style($warning,$warning,$white);
     &.plain {
-        @include button-style($warning-9,$warning-5,$warning,$warning,$warning,$white)
+        @include button-style($white,$warning-5,$warning,$warning,$warning,$white)
     }
 }
 .btn-danger {
     @include button-style($danger,$danger,$white);
     &.plain {
-        @include button-style($danger-9,$danger-5,$danger,$danger,$danger,$white)
+        @include button-style($white,$danger-5,$danger,$danger,$danger,$white)
     }
 }
 

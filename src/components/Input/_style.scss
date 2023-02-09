@@ -36,7 +36,6 @@
     // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
     border-radius: $input-border-radius;
   
-    // box-shadow: $input-box-shadow;
     transition: $input-transition;
   
     &:focus {
