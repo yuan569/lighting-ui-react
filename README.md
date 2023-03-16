@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+## 欢迎来到 Lighting UI 组件库
+## Lighting UI 是一个轻量级的UI组件库，基于React Hooks、Typescirpt开发，适合toC项目的使用。
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm run storybook`
+### 安装最后已经发布的组件库来试试
 
-Runs the app in the storybook.\
-Open [http://localhost:9009](http://localhost:9009) to view it in the browser.
+~~~javascript
+npm install lighting-ui --save
+~~~
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 使用
 
-### `npm test`
+~~~javascript
+// 加载样式
+import 'lighting-ui/dist/index.css'
+// 引入组件
+import { Button } from 'lighting-ui'
+~~~
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 项目亮点
 
-### `npm run build`
+* 支持按需引用
+* 详尽的文档和示例
+* 单元测试覆盖(React-Testing-Library)
+* 支持 TypeScript
+* 使用开源图标库 Feather-Icons。
+* 使用Sass组织样式。
+* 支持Travis CI/CD。
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 一些本地开发命令
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+~~~bash
+//启动本地环境
+npm run stroybook
 
-### `npm run eject`
+//跑单元测试
+npm test
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+//build可发布静态文件
+npm run build
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+//发布到 npm
+npm run publish
+~~~

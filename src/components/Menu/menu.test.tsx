@@ -1,14 +1,14 @@
 import React from 'react'
-import { render, RenderResult, fireEvent, cleanup, wait } from '@testing-library/react'
+import { render, RenderResult, fireEvent, wait } from '@testing-library/react'
 import Menu, { MenuProps } from './menu'
 import MenuItem from './menuItem'
 import SubMenu from './subMenu'
-import { wrap } from 'retry'
-import { async } from 'q'
+// import { wrap } from 'retry'
+// import { async } from 'q'
 
-const defaultProps = {
-  onClick: jest.fn()
-}
+// const defaultProps = {
+//   onClick: jest.fn()
+// }
 
 const testProps: MenuProps = {
   defaultIndex: '0',

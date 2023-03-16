@@ -1,4 +1,4 @@
-import React, { FC, useState, ChangeEvent, KeyboardEvent, ReactElement, useEffect, useRef, MouseEventHandler } from 'react'
+import React, { FC, useState, KeyboardEvent, ReactElement, useRef } from 'react'
 import classNames from 'classnames'
 import Input, { InputProps } from '../Input/input'
 import Icon from '../Icon/icon'
@@ -178,7 +178,7 @@ export const Select: FC<SelectProps> = (props) => {
         disabled={disabled}
         {...restProps}
       />
-      <Icon name="chevron-down" size="20" strokeWidth="1.2" theme="secondary" className="lighting-select-suffix" />
+      <Icon name="chevron-down" size="20" strokeWidth="1.2" className="lighting-select-suffix" />
       {suggestions && suggestions.length > 0 ? generateDropdown() : null}
     </div>
   )

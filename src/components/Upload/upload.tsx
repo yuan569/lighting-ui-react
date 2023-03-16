@@ -2,8 +2,8 @@ import React, { FC, useRef, useState } from "react";
 import axios from "axios";
 import UploadList from "./uploadList";
 import Dragger from "./dragger";
-import Button from "../Button/button";
-import { file } from "@babel/types";
+// import Button from "../Button/button";
+// import { file } from "@babel/types";
 
 export type UploadFileStatus = "ready" | "uploading" | "success" | "error";
 

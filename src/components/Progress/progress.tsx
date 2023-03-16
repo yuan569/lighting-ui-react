@@ -8,8 +8,6 @@ export interface ProgressProps {
   strokeHeight?: number;
   /**是否显示文本*/
   showText?: boolean;
-  /**内联样式*/
-  styles?: React.CSSProperties;
   /**设置主题色*/
   theme?: ThemeProps;
 }
@@ -24,7 +22,7 @@ export interface ProgressProps {
  */
 
 export const Progress: FC<ProgressProps> = props => {
-  const { percent, strokeHeight, showText, styles, theme } = props;
+  const { percent, strokeHeight, showText, theme } = props;
   return (
     <div className="lighting-progress-bar">
       <div

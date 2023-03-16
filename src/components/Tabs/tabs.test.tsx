@@ -1,14 +1,14 @@
 import React from 'react'
-import { render, RenderResult, fireEvent, cleanup, wait } from '@testing-library/react'
+import { render, RenderResult, fireEvent } from '@testing-library/react'
 import Tabs, { TabsProps } from './tabs'
 import TabList from './tabList'
 import Tab from './tab'
 import TabPanels from './tabPanels'
 import TabPanel from './tabPanel'
 
-const defaultProps = {
-  onSelect: jest.fn()
-}
+// const defaultProps = {
+//   onSelect: jest.fn()
+// }
 
 const testProps: TabsProps = {
   mode: 'line',

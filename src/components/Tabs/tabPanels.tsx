@@ -1,5 +1,5 @@
-import React, { FC, useContext } from 'react'
-import { TabsContext } from './tabs'
+import React, { FC } from 'react'
+// import { TabsContext } from './tabs'
 
 export interface TabPanelsProps {
     /** 索引 */

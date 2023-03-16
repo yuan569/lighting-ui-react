@@ -1,6 +1,6 @@
 import React from 'react'
 import { config } from 'react-transition-group'
-import { render, RenderResult, fireEvent, wait } from '@testing-library/react'
+import { render, RenderResult, fireEvent } from '@testing-library/react'
 import { Select, SelectProps } from './select'
 
 
