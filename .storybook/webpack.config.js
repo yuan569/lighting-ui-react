@@ -7,7 +7,7 @@ module.exports = ({ config }) => {
         options: {
           presets: [require.resolve("babel-preset-react-app")]
         }
-      },
+      }, 
       {
         loader: require.resolve("react-docgen-typescript-loader"),
         options: {
@@ -19,24 +19,6 @@ module.exports = ({ config }) => {
             return true            
           }
         }
-      }
-    ]
-  });
-
-  config.module.rules.push({
-    test: /\.scss$/,
-    use: [
-      {
-        loader: require.resolve("style-loader")
-        
-      },
-      {
-        loader: require.resolve("css-loader")
-        
-      },
-      {
-        loader: require.resolve("sass-loader")
-        
       }
     ]
   });
