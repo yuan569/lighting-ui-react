@@ -1,9 +1,8 @@
-import React, { FC, useRef, useState } from "react";
+import React, { FC, useRef, useState, ChangeEvent } from "react";
 import axios from "axios";
 import UploadList from "./uploadList";
 import Dragger from "./dragger";
-// import Button from "../Button/button";
-// import { file } from "@babel/types";
+
 
 export type UploadFileStatus = "ready" | "uploading" | "success" | "error";
 
@@ -24,7 +23,7 @@ export interface UploadProps {
   /**默认文件列表*/
   defaultFileList?: UploadFile[];
   /**上传前回调*/
-  beforeUpload?: (file: File) => void;
+  beforeUpload?: (file: File) => boolean | Promise<File>;
   /**上传中回调*/
   onProgress?: (percentage: number, file: File) => void;
   /**上传成功回调*/
@@ -100,7 +99,7 @@ export const Upload: FC<UploadProps> = props => {
       fileInput.current.click();
     }
   };
-  const handleFileChange = (e: changeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files) {
       return;
