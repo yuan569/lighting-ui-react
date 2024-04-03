@@ -22,7 +22,7 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
  * ### 引用方法
  * ---
  * ~~~js
- * import { Input } from 'lighting-ui'
+ * import { Input } from 'lighting-ui-react'
  * ~~~
  */
 export const Input: FC<InputProps> = (props) => {

@@ -24,7 +24,7 @@ export interface IconProps extends FeatherIconProps {
  * ### 引用方法
  * ---
  * ~~~js
- * import { Icon } from 'lighting-ui'
+ * import { Icon } from 'lighting-ui-react'
  * ~~~
  */
 

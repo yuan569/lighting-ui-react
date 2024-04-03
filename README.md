@@ -7,16 +7,16 @@
 ### 安装最后已经发布的组件库来试试
 
 ~~~javascript
-npm install lighting-ui --save
+npm install lighting-ui-react --save
 ~~~
 
 ### 使用
 
 ~~~javascript
 // 加载样式
-import 'lighting-ui/dist/index.css'
+import 'lighting-ui-react/dist/index.css'
 // 引入组件
-import { Button } from 'lighting-ui'
+import { Button } from 'lighting-ui-react'
 ~~~
 
 ### 项目亮点

@@ -44,7 +44,7 @@ const SimpleUpload = () => {
       onRemove={action("removed")}
       name="filename"
       data={{ key: "value" }}
-      headers={{ "X-Powered-By": "lighting-ui" }}
+      headers={{ "X-Powered-By": "lighting-ui-react" }}
       accpet=".jpg"
       multiple
       drag={true}

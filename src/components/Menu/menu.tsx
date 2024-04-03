@@ -34,7 +34,7 @@ export const MenuContext = createContext<IMenuContext>({ index: '0', defaultOpen
  * ### 引用方法
  * ---
  * ~~~js
- * import { Menu } from 'lighting-ui'
+ * import { Menu } from 'lighting-ui-react'
  * ~~~
  * 
  */

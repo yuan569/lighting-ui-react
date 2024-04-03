@@ -35,7 +35,7 @@ export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
  * ### 引用方法
  * ---
  * ~~~js
- * import { Button } from 'lighting-ui'
+ * import { Button } from 'lighting-ui-react'
  * ~~~
  * @param props 
  */

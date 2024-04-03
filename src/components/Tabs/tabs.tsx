@@ -32,7 +32,7 @@ export const TabsContext = createContext<ITabsContext>({ index: '0' })
  * ### 引用方法
  * ---
  * ~~~js
- * import { Tabs } from 'lighting-ui'
+ * import { Tabs } from 'lighting-ui-react'
  * ~~~
  * 
  */

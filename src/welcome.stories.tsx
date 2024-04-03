@@ -19,7 +19,7 @@ storiesOf('Welcome page', module)
 
         <h3>安装试试</h3>
         <code>
-          npm install lighting-ui --save
+          npm install lighting-ui-react --save
         </code>
       </>
     )

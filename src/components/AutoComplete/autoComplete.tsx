@@ -20,7 +20,7 @@ export interface AutoCompleteProps extends Omit<InputProps, 'onSelect'> {
  * ### 引用方法
  * ---
  * ~~~js
- * import { AutoComplete } from 'lighting-ui'
+ * import { AutoComplete } from 'lighting-ui-react'
  * ~~~
  * @param props 
  */
@@ -96,7 +96,7 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
     }
   }
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.trim()
+    const value = e.target.value.replace(/^\s*|\s*$/g, '');
     setInputValue(value)
     triggerSearch.current = true
   }

@@ -54,7 +54,7 @@ export interface UploadProps {
  * ### 引用方法
  * ---
  * ~~~js
- * import { Upload } from 'lighting-ui'
+ * import { Upload } from 'lighting-ui-react'
  * ~~~
  * 
  */

@@ -24,7 +24,7 @@ export interface SelectProps extends Omit<InputProps, 'onSelect'> {
  * ### 引用方法
  * ---
  * ~~~js
- * import { Select } from 'lighting-ui'
+ * import { Select } from 'lighting-ui-react'
  * ~~~
  * 
  */

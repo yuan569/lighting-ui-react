@@ -16,7 +16,7 @@ export interface ProgressProps {
  * ### 引用方法
  * ---
  * ~~~js
- * import { Progress } from 'lighting-ui'
+ * import { Progress } from 'lighting-ui-react'
  * ~~~
  * 
  */
