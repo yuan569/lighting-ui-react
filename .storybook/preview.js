@@ -1,7 +1,11 @@
 import "../src/styles/index.scss"
-import { Icon as FeatherIcon, IconComponentProps as FeatherIconProps } from '@ailibs/feather-react-ts';
+const { addDecorator } = require('@storybook/react');
+const { withPropsTable } = require('storybook-addon-react-docgen');
 
-import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
+
+
+addDecorator(withPropsTable);
+
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
