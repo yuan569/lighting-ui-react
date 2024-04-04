@@ -1,10 +1,5 @@
 import "../src/styles/index.scss"
-const { addDecorator } = require('@storybook/react');
-const { withPropsTable } = require('storybook-addon-react-docgen');
 
-
-
-addDecorator(withPropsTable);
 
 
 export const parameters = {
