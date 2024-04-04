@@ -45,7 +45,7 @@ const SimpleUpload = () => {
       name="filename"
       data={{ key: "value" }}
       headers={{ "X-Powered-By": "lighting-ui-react" }}
-      accpet=".jpg"
+      accept=".jpg"
       multiple
       drag={true}
     >
