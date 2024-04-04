@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import Button, { ButtonProps, ButtonType, ButtonSize } from './button'
+import Button, { ButtonProps } from './button'
 
 
 
