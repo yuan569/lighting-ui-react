@@ -1,4 +1,11 @@
 {
+  "editor.formatOnSave": true, // 自动保存的时候格式化代码
+  "search.exclude": {
+    // 排除下面的文件
+    "**/node_modules": true,
+    "dist": true,
+    "yarn.lock": true
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",

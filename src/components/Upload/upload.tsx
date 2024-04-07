@@ -3,7 +3,6 @@ import axios from "axios";
 import UploadList from "./uploadList";
 import Dragger from "./dragger";
 
-
 export type UploadFileStatus = "ready" | "uploading" | "success" | "error";
 
 export interface UploadFile {
@@ -56,10 +55,10 @@ export interface UploadProps {
  * ~~~js
  * import { Upload } from 'lighting-ui-react'
  * ~~~
- * 
+ *
  */
 
-export const Upload: FC<UploadProps> = props => {
+export const Upload: FC<UploadProps> = (props) => {
   const {
     action,
     defaultFileList,
@@ -76,7 +75,7 @@ export const Upload: FC<UploadProps> = props => {
     accept,
     multiple,
     children,
-    drag
+    drag,
   } = props;
   const fileInput = useRef<HTMLInputElement>(null);
   const [fileList, setFileList] = useState<UploadFile[]>(defaultFileList || []);
@@ -84,8 +83,8 @@ export const Upload: FC<UploadProps> = props => {
     updateFile: UploadFile,
     updateObj: Partial<UploadFile>
   ) => {
-    setFileList(prevList => {
-      return prevList.map(file => {
+    setFileList((prevList) => {
+      return prevList.map((file) => {
         if (file.uid === updateFile.uid) {
           return { ...file, ...updateObj };
         } else {
@@ -111,8 +110,8 @@ export const Upload: FC<UploadProps> = props => {
   };
   const handleRemove = (file: UploadFile) => {
     // console.log(file, "file");
-    setFileList(prevList => {
-      return prevList.filter(item => item.uid !== file.uid);
+    setFileList((prevList) => {
+      return prevList.filter((item) => item.uid !== file.uid);
     });
     if (onRemove) {
       onRemove(file);
@@ -120,14 +119,14 @@ export const Upload: FC<UploadProps> = props => {
   };
   const uploadFiles = (files: FileList) => {
     let postFiles = Array.from(files);
-    postFiles.forEach(file => {
+    postFiles.forEach((file) => {
       if (!beforeUpload) {
         post(file);
       } else {
         const result = beforeUpload(file);
         // console.log(result,"beforeUpload result")
         if (result && result instanceof Promise) {
-          result.then(processedFile => {
+          result.then((processedFile) => {
             post(processedFile);
           });
         } else if (result !== false) {
@@ -144,25 +143,26 @@ export const Upload: FC<UploadProps> = props => {
       name: file.name,
       size: file.size,
       percent: 0,
-      raw: file
+      raw: file,
     };
-    setFileList(prevList => {
+    setFileList((prevList) => {
       return [_file, ...prevList];
     });
     const formData = new FormData();
     formData.append(name || "file", file);
     if (data) {
-      Object.keys(data).forEach(key => {
+      Object.keys(data).forEach((key) => {
         formData.append(key, data[key]);
       });
     }
-    axios.post(action, formData, {
+    axios
+      .post(action, formData, {
         headers: {
           ...headers,
-          "Content-Type": "multipart/form-data"
+          "Content-Type": "multipart/form-data",
         },
         withCredentials,
-        onUploadProgress: e => {
+        onUploadProgress: (e) => {
           let percentage = Math.round((e.loaded * 100) / e.total) || 0;
           if (percentage < 100) {
             updateFileList(_file, { percent: percentage, status: "uploading" });
@@ -170,8 +170,9 @@ export const Upload: FC<UploadProps> = props => {
               onProgress(percentage, file);
             }
           }
-        }
-      }).then(resp => {
+        },
+      })
+      .then((resp) => {
         // console.log(resp);
         updateFileList(_file, { response: resp.data, status: "success" });
         if (onSuccess) {
@@ -181,7 +182,7 @@ export const Upload: FC<UploadProps> = props => {
           onChange(file);
         }
       })
-      .catch(err => {
+      .catch((err) => {
         // console.error(err);
         updateFileList(_file, { error: err, status: "error" });
         if (onError) {
@@ -203,7 +204,7 @@ export const Upload: FC<UploadProps> = props => {
       >
         {drag ? (
           <Dragger
-            onFile={files => {
+            onFile={(files) => {
               uploadFiles(files);
             }}
           >
@@ -221,7 +222,6 @@ export const Upload: FC<UploadProps> = props => {
           accept={accept}
           multiple={multiple}
         />
-        
       </div>
       <UploadList fileList={fileList} onRemove={handleRemove}></UploadList>
     </div>
@@ -229,7 +229,7 @@ export const Upload: FC<UploadProps> = props => {
 };
 
 Upload.defaultProps = {
-  name: "file"
+  name: "file",
 };
 
 export default Upload;
