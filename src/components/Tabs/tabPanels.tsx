@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 // import { TabsContext } from './tabs'
 
 export interface TabPanelsProps {
@@ -11,19 +11,24 @@ export interface TabPanelsProps {
 }
 
 export const TabPanels: FC<TabPanelsProps> = (props) => {
-    const { children } = props
+    const { children } = props;
 
-    return <div className="tab-panels">{React.Children.map(children, (child, index) => {
-        const childElement = child as React.FunctionComponentElement<TabPanelsProps>
-        return React.cloneElement(childElement, {
-            index: index.toString(),
-        })
-    })}</div>
-}
+    return (
+        <div className="tab-panels">
+            {React.Children.map(children, (child, index) => {
+                const childElement =
+                    child as React.FunctionComponentElement<TabPanelsProps>;
+                return React.cloneElement(childElement, {
+                    index: index.toString(),
+                });
+            })}
+        </div>
+    );
+};
 
-TabPanels.displayName = 'TabPanels';
+TabPanels.displayName = "TabPanels";
 TabPanels.defaultProps = {
-    index: '0',
+    index: "0",
 };
 
 export default TabPanels;

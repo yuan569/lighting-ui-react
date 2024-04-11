@@ -1,5 +1,8 @@
 {
   "editor.formatOnSave": true, // 自动保存的时候格式化代码
+  "editor.detectIndentation": false,
+  "editor.indentSize": "tabSize",
+  "editor.tabSize": 4,
   "search.exclude": {
     // 排除下面的文件
     "**/node_modules": true,
