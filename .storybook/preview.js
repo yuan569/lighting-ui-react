@@ -1,6 +1,4 @@
-import "../src/styles/index.scss"
-
-
+import "../src/styles/index.scss";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -10,12 +8,21 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  
 
   options: {
     storySort: {
-      order: ['Button', 'Menu', 'Tabs', 'Icon', 'Input', 'AutoComplete', 'Select', 'Progress', 'Upload'],
+      order: [
+        "Welcome",
+        "Button",
+        "Menu",
+        "Tabs",
+        "Icon",
+        "Input",
+        "AutoComplete",
+        "Select",
+        "Progress",
+        "Upload",
+      ],
     },
-    
   },
-}
+};
